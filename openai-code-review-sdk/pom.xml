@@ -128,6 +128,7 @@
                         </goals>
                     </execution>
                 </executions>
+                <!-- 如果你用了三方jar，不想一个个确定的引入，可以去掉 configuration 以及以内的配置，这样会全部打包 -->
                 <configuration>
                     <artifactSet>
                         <includes>
