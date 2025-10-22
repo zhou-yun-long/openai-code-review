@@ -2,6 +2,7 @@ package plus.gaga.middleware.sdk.domain.model;
 
 public enum Model {
 
+
     @Deprecated
     CHATGLM_6B_SSE("chatGLM_6b_SSE", "ChatGLM-6B 测试模型"),
     @Deprecated
