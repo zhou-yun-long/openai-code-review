@@ -39,6 +39,7 @@ public abstract class AbstractOpenAiCodeReviewService implements IOpenAiCodeRevi
         }
 
     }
+    // 抽象方法
 
     protected abstract String getDiffCode() throws IOException, InterruptedException;
 
