@@ -12,7 +12,6 @@ import java.io.IOException;
 public abstract class AbstractOpenAiCodeReviewService implements IOpenAiCodeReviewService {
 
     private final Logger logger = LoggerFactory.getLogger(AbstractOpenAiCodeReviewService.class);
-
     protected final GitCommand gitCommand;
 
     protected final IOpenAI openAI;
