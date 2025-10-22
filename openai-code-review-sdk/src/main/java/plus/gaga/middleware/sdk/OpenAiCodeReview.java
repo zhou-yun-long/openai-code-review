@@ -12,15 +12,15 @@ public class OpenAiCodeReview {
 
     private static final Logger logger = LoggerFactory.getLogger(OpenAiCodeReview.class);
 
-    // 配置配置
-    private String weixin_appid = "wx5a228ff69e28a91f";
-    private String weixin_secret = "0bea03aa1310bac050aae79dd8703928";
-    private String weixin_touser = "or0Ab6ivwmypESVp_bYuk92T6SvU";
-    private String weixin_template_id = "l2HTkntHB71R4NQTW77UkcqvSOIFqE_bss1DAVQSybc";
+    // 微信配置
+    private String weixin_appid = "wxc6f822034ec2991a";
+    private String weixin_secret = "d647cfe3cfd21431749823670ee1d4e3";
+    private String weixin_touser = "oswWhvi3EEjnqkRVoIgnGbHbL_q4";
+    private String weixin_template_id = "I0rrwm1cW8boqBp8nLc7h7MvI8kq7SRejLZLqu6aCbI";
 
     // ChatGLM 配置
     private String chatglm_apiHost = "https://open.bigmodel.cn/api/paas/v4/chat/completions";
-    private String chatglm_apiKeySecret = "";
+    private String chatglm_apiKeySecret = "0bbc851922cd408fa77bdc978b2ff83e.v95Kj7rYvRCAiIAN";
 
     // Github 配置
     private String github_review_log_uri;
@@ -32,6 +32,7 @@ public class OpenAiCodeReview {
     private String github_author;
 
     public static void main(String[] args) throws Exception {
+        //
         GitCommand gitCommand = new GitCommand(
                 getEnv("GITHUB_REVIEW_LOG_URI"),
                 getEnv("GITHUB_TOKEN"),
@@ -64,7 +65,7 @@ public class OpenAiCodeReview {
     private static String getEnv(String key) {
         String value = System.getenv(key);
         if (null == value || value.isEmpty()) {
-            throw new RuntimeException("value is null");
+            throw new RuntimeException("Environment variable '" + key + "' is not set. Please configure it in GitHub Secrets.");
         }
         return value;
     }

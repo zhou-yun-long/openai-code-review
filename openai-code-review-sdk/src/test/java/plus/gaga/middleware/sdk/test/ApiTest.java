@@ -19,14 +19,24 @@ import java.util.Scanner;
 public class ApiTest {
 
     public static void main(String[] args) {
-        String apiKeySecret = "c78fbacd3e10118ad5649d7a54a3a163.UunYDBxpzeClvSKZ";
+        String apiKeySecret = "0bbc851922cd408fa77bdc978b2ff83e.v95Kj7rYvRCAiIAN";
+        //earerTokenUtils 工具类生成一个认证令牌（token)
         String token = BearerTokenUtils.getToken(apiKeySecret);
         System.out.println(token);
     }
 
+
+    /**
+     * 测试http请求:检验大模型是否有效
+     * 1.使用API密钥生成Bearer Token；
+     * 2.构造并发送POST请求至大模型接口；
+     * 3.设置请求头（认证、内容类型等）；
+     * 4.发送JSON格式的聊天消息数据；
+     * 5.接收并解析响应结果，输出模型回复内容。
+     */
     @Test
     public void test_http() throws IOException {
-        String apiKeySecret = "c78fbacd3e10118ad5649d7a54a3a163.UunYDBxpzeClvSKZ";
+        String apiKeySecret = "0bbc851922cd408fa77bdc978b2ff83e.v95Kj7rYvRCAiIAN";
         String token = BearerTokenUtils.getToken(apiKeySecret);
 
         URL url = new URL("https://open.bigmodel.cn/api/paas/v4/chat/completions");
@@ -41,7 +51,7 @@ public class ApiTest {
         String code = "1+1";
 
         String jsonInpuString = "{"
-                + "\"model\":\"glm-4-flash\","
+                + "\"model\":\"glm-4.5-flash\","
                 + "\"messages\": ["
                 + "    {"
                 + "        \"role\": \"user\","
@@ -74,6 +84,8 @@ public class ApiTest {
         System.out.println(response.getChoices().get(0).getMessage().getContent());
 
     }
+
+
 
     @Test
     public void test_wx() {
@@ -112,9 +124,9 @@ public class ApiTest {
     }
 
     public static class Message {
-        private String touser = "or0Ab6ivwmypESVp_bYuk92T6SvU";
-        private String template_id = "mKhGjV7UAV7Se9_byoPrgRlNfgJac8ZAfLnK8hyGmTQ";
-        private String url = "https://github.com/fuzhengwei/openai-code-review-log/blob/master/2024-07-27/Wzpxr6j1JY9k.md";
+        private String touser = "oswWhvn3OnRLRqiFvYvU0BoSBVco";
+        private String template_id = "I0rrwm1cW8boqBp8nLc7h7MvI8kq7SRejLZLqu6aCbI";
+        private String url = "https://github.com/zhou-yun-long/openai-code-review-log/blob/master/2024-07-27/Wzpxr6j1JY9k.md";
         private Map<String, Map<String, String>> data = new HashMap<>();
 
         public void put(String key, String value) {

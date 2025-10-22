@@ -10,7 +10,9 @@ import plus.gaga.middleware.sdk.types.utils.RandomStringUtils;
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
+//GitCommand作用：
+//获取Git提交的差异代码
+//将评审结果提交到日志仓库
 public class GitCommand {
 
     private final Logger logger = LoggerFactory.getLogger(GitCommand.class);
@@ -26,6 +28,8 @@ public class GitCommand {
     private final String author;
 
     private final String message;
+
+    // 构造函数 配置
 
     public GitCommand(String githubReviewLogUri, String githubToken, String project, String branch, String author, String message) {
         this.githubReviewLogUri = githubReviewLogUri;
