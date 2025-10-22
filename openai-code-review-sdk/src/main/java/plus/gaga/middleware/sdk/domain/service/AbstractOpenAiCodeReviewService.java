@@ -14,6 +14,7 @@ public abstract class AbstractOpenAiCodeReviewService implements IOpenAiCodeRevi
     private final Logger logger = LoggerFactory.getLogger(AbstractOpenAiCodeReviewService.class);
 
     protected final GitCommand gitCommand;
+
     protected final IOpenAI openAI;
     protected final WeiXin weiXin;
 
