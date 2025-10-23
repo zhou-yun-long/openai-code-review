@@ -33,7 +33,7 @@ public class OpenAiCodeReview {
     private String github_author;
 
     public static void main(String[] args) throws Exception {
-        //
+        // 获取git信息
         GitCommand gitCommand = new GitCommand(
                 getEnv("GITHUB_REVIEW_LOG_URI"),
                 getEnv("GITHUB_TOKEN"),

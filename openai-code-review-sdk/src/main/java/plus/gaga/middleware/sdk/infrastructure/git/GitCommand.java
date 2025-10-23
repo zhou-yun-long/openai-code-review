@@ -40,8 +40,10 @@ public class GitCommand {
         this.message = message;
     }
 
+    // 获取Git的差异代码
     public String diff() throws IOException, InterruptedException {
         // openai.itedus.cn
+
         ProcessBuilder logProcessBuilder = new ProcessBuilder("git", "log", "-1", "--pretty=format:%H");
         logProcessBuilder.directory(new File("."));
         Process logProcess = logProcessBuilder.start();
