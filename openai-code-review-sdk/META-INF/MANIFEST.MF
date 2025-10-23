@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Main-Class: plus.gaga.middleware.sdk.OpenAiCodeReview
+Class-Path: j2objc-annotations-2.8.jar org.eclipse.jgit-5.13.0.202109080
+ 827-r.jar slf4j-simple-2.0.6.jar failureaccess-1.0.1.jar listenablefutu
+ re-9999.0-empty-to-avoid-conflict-with-guava.jar error_prone_annotation
+ s-2.18.0.jar guava-32.1.2-jre.jar fastjson2-2.0.49.jar java-jwt-4.2.2.j
+ ar slf4j-api-2.0.6.jar jackson-annotations-2.13.3.jar checker-qual-3.33
+ .0.jar jackson-core-2.13.3.jar jsr305-3.0.2.jar JavaEWAH-1.1.12.jar jac
+ kson-databind-2.13.3.jar
+
