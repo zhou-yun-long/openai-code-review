@@ -17,7 +17,8 @@ public class OpenAiCodeReview {
     private String weixin_appid = "wxc6f822034ec2991a";
     private String weixin_secret = "d647cfe3cfd21431749823670ee1d4e3";
     private String weixin_touser = "oswWhvi3EEjnqkRVoIgnGbHbL_q4";
-    private String weixin_template_id = "I0rrwm1cW8boqBp8nLc7h7MvI8kq7SRejLZLqu6aCbI";
+    private String weixin_template_id = "wSReZss7BTE-XDfaqgyIUarFNszfA76HyAhhQYLUcUc";
+
 
     // ChatGLM 配置
     private String chatglm_apiHost = "https://open.bigmodel.cn/api/paas/v4/chat/completions";
