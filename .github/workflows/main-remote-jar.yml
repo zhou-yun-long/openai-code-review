@@ -32,7 +32,7 @@ jobs:
 
       # 下载SDK-jar包, 注意下载仓库需要为public
       - name: Download openai-code-review-sdk jar
-        run: curl -L -o ./libs/openai-code-review-sdk-1.0.jar https://github.com/zhou-yun-long/openai-code-review-log/releases/tag/v1.0/openai-code-review-sdk-1.0.jar
+        run: wget -O ./libs/openai-code-review-sdk-1.1.jar https://github.com/xfg-studio-project/openai-code-review-log/releases/download/v1.1/openai-code-review-sdk-1.1.jar
 
       - name: Get repository name
         id: repo-name
